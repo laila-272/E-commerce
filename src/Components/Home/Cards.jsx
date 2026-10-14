@@ -37,27 +37,30 @@ export default function EditorialCards() {
     <section
       id="edit"
       aria-label="Collections"
-      className="bg-[#F8F4EF] py-10 lg:py-[5.5vw]"
+      className="bg-[#F8F4EF] py-10 sm:py-12 lg:py-20"
     >
-      <ul className="mx-auto grid  gap-10 px-5 sm:px-8 md:grid-cols-3 md:gap-[4.5%] lg:px-[120px]">
+      <ul className="mx-auto grid w-full max-w-[1600px] grid-cols-1 gap-8 px-5 sm:grid-cols-2 sm:gap-6 sm:px-8 md:grid-cols-3 md:gap-5 md:px-10 lg:gap-8 lg:px-16 xl:gap-10 xl:px-[120px]">
         {cards.map((c) => (
-          <li key={c.id}>
+          <li key={c.id} className="min-w-0">
             <a href={c.href} className="group block">
-              <div className="aspect-[146/155] overflow-hidden rounded-t-xl bg-line">
+              <div className="aspect-[4/4.4] overflow-hidden rounded-t-xl bg-line sm:aspect-[4/4.6] md:aspect-[4/4.8] lg:aspect-[146/155]">
                 <img
                   src={c.image}
                   alt={c.alt}
                   loading="lazy"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
               </div>
-              <p className="mt-3 text-[9px] font-medium uppercase tracking-[0.14em] text-mist">
+
+              <p className="mt-3 text-[9px] font-medium uppercase tracking-[0.14em] text-mist sm:text-[10px]">
                 {c.label}
               </p>
-              <h3 className="mt-1.5 font-fredericka text-[22px] leading-tight lg:text-[clamp(18px,1.6vw,26px)]">
+
+              <h3 className="mt-1.5 font-fredericka text-xl leading-tight sm:text-[21px] lg:text-[clamp(18px,1.6vw,26px)]">
                 {c.title}
               </h3>
-              <span className="mt-1.5 inline-block text-[11px] font-medium group-hover:underline">
+
+              <span className="mt-2 inline-block text-[11px] font-medium sm:text-xs group-hover:underline">
                 {c.cta} &rarr;
               </span>
             </a>
@@ -67,3 +70,4 @@ export default function EditorialCards() {
     </section>
   );
 }
+;

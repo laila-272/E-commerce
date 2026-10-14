@@ -1,3 +1,4 @@
+
 import { Star } from "lucide-react";
 
 const quote =
@@ -13,25 +14,25 @@ export default function TestimonialsSection() {
   return (
     <section
       aria-labelledby="testimonials-title"
-      className="overflow-hidden bg-white py-12 lg:py-[5.2vw]"
+      className="overflow-hidden bg-white py-10 sm:py-12 lg:py-20"
     >
-      <div className="mx-auto px-5 sm:px-8 lg:px-[120px]">
+      <div className="mx-auto w-full max-w-[1600px] px-5 sm:px-8 md:px-10 lg:px-16 xl:px-[120px]">
         <h2
           id="testimonials-title"
-          className="font-serif text-[28px] tracking-tight lg:text-[clamp(28px,2.7vw,40px)]"
+          className="font-serif text-[28px] leading-tight tracking-tight sm:text-3xl lg:text-[clamp(28px,2.7vw,40px)]"
         >
           Made for real life
         </h2>
 
-        <ul className="mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:grid md:grid-cols-3 md:gap-4 md:overflow-visible md:pb-0 lg:mt-[1.6vw] lg:gap-[1.8%]">
+        <ul className="mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:grid md:grid-cols-3 md:gap-4 md:overflow-visible md:pb-0 lg:mt-8 lg:gap-6">
           {testimonials.map((t) => (
             <li
               key={t.id}
-              className="w-[88%] shrink-0 snap-start sm:w-[65%] md:w-auto md:shrink md:aspect-[170/132]"
+              className="flex w-[88%] min-w-0 shrink-0 snap-start sm:w-[65%] md:w-auto"
             >
-              <figure className="dashed-border flex h-full flex-col px-6 py-6 lg:px-[10%] lg:py-[8%]">
+              <figure className="dashed-border flex min-h-[260px] w-full flex-1 flex-col p-5 sm:min-h-[280px] sm:p-6 lg:min-h-[320px] lg:p-7 xl:p-8">
                 <div
-                  className="flex gap-0.5"
+                  className="flex shrink-0 gap-0.5"
                   role="img"
                   aria-label={`${t.rating} out of 5 stars`}
                 >
@@ -46,11 +47,11 @@ export default function TestimonialsSection() {
                   ))}
                 </div>
 
-                <blockquote className="mt-4 whitespace-pre-line text-[17px] leading-[1.55] text-ink md:mt-[5%] lg:text-[clamp(15px,1.6vw,23px)]">
+                <blockquote className="mt-4 whitespace-pre-line break-words text-[16px] leading-relaxed text-ink sm:text-[17px] md:text-base lg:mt-6 lg:text-[clamp(16px,1.35vw,21px)]">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
 
-                <figcaption className="mt-5 text-[12px] font-medium uppercase tracking-[0.06em] text-ink lg:mt-5">
+                <figcaption className="mt-auto pt-6 text-[11px] font-medium uppercase leading-relaxed tracking-[0.06em] text-ink sm:text-xs">
                   {t.author}
                 </figcaption>
               </figure>
