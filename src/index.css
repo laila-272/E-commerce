@@ -1,0 +1,51 @@
+/*import fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Fredericka+the+Great&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+/* Define fonts in Tailwind */
+@theme{
+    --font-fraunces: "Fraunces", serif;
+    --font-fredericka: "Fredericka the Great", serif;
+    --font-inter: "Inter", sans-serif;
+}
+ @keyframes announcement-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.announcement-track {
+    animation: announcement-scroll 20s linear infinite;
+}
+
+.announcement-track:hover {
+    animation-play-state: paused;
+}
+
+ @keyframes perks-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.perks-track {
+    animation: perks-scroll 18s linear infinite;
+}
+
+.dashed-border {
+    border: none;
+    background:
+        linear-gradient(to right, #000 50%, transparent 50%) top / 12px 1px repeat-x,
+        linear-gradient(to right, #000 50%, transparent 50%) bottom / 12px 1px repeat-x,
+        linear-gradient(to bottom, #000 50%, transparent 50%) left / 1px 12px repeat-y,
+        linear-gradient(to bottom, #000 50%, transparent 50%) right / 1px 12px repeat-y;
+}
+
+
